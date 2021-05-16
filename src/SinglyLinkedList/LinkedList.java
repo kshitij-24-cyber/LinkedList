@@ -72,4 +72,21 @@ public class LinkedList {
              temP.next=null;
          }
         }
+        public boolean search(int data){
+        Node node = new Node(data);
+        if (head == null){
+            return false;
+        }
+        else {
+            Node TEMP = head;
+           while (TEMP!=null){
+               if (TEMP.Data== node.Data){
+                   return false;
+               }
+               TEMP = TEMP.next;
+           }
+        }
+        return false;
+        }
+
 }
