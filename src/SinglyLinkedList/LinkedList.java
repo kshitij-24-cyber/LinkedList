@@ -2,9 +2,11 @@ package SinglyLinkedList;
 
 public class LinkedList {
     public Node head;
+
     public LinkedList() {
         this.head = null;
     }
+
     /* insert at begniing */
     public void insert(int data) {
         Node newNode = new Node(data);
@@ -15,11 +17,11 @@ public class LinkedList {
             head = newNode;
         }
     }
+
     /*
      insert at the end  method
      */
-    public void insertAtend(int data)
-    {
+    public void insertAtend(int data) {
         Node Newnode = new Node(data);
         if (head == null) {
             head = Newnode;
@@ -31,6 +33,7 @@ public class LinkedList {
             temp.next = Newnode;
         }
     }
+
     // print method
     public void printList() {
         if (head == null) {
@@ -43,50 +46,74 @@ public class LinkedList {
             }
         }
     }
-    public void inserAtEnd(int data){
+
+    public void inserAtEnd(int data) {
         Node NewNode = new Node(data);
-        if (head == null ){
+        if (head == null) {
             head = NewNode;
-        }
-        else {
+        } else {
             Node Temp = head;
-            while (Temp.next!= null){
-                Temp=Temp.next;
+            while (Temp.next != null) {
+                Temp = Temp.next;
             }
-            Temp.next  = NewNode;
+            Temp.next = NewNode;
         }
     }
 
-    public void deletAtEnd(int data)
-        {
-         Node DeletNode = new Node(data);
-         if (head == null){
-             System.out.println("Empty");
-         }
-         else {
-             Node temP = head;
-             while (temP.next.next!=null){
-                 temP=temP.next;
+    public void deletAtEnd(int data) {
+        Node DeletNode = new Node(data);
+        if (head == null) {
+            System.out.println("Empty");
+        } else {
+            Node temP = head;
+            while (temP.next.next != null) {
+                temP = temP.next;
 
-             }
-             temP.next=null;
-         }
+            }
+            temP.next = null;
         }
-        public boolean search(int data){
+    }
+
+    public boolean search(int data) {
         Node node = new Node(data);
-        if (head == null){
+        if (head == null) {
             return false;
-        }
-        else {
+        } else {
             Node TEMP = head;
-           while (TEMP!=null){
-               if (TEMP.Data== node.Data){
-                   return false;
-               }
-               TEMP = TEMP.next;
-           }
+            while (TEMP != null) {
+                if (TEMP.Data == node.Data) {
+                    return false;
+                }
+                TEMP = TEMP.next;
+            }
         }
         return false;
+    }
+
+
+    public void insertAtPos(int data, int pos) {
+        Node temp = head;
+        if (pos == 1) {
+            temp.next = head;
+
         }
 
+
+        Node curr = head;
+        for (int i = 1; i <= pos - 2 && curr != null; i++) {
+            curr = curr.next;
+            if (curr == null) {
+
+            }
+            temp.next = curr.next;
+            curr.next=temp;
+
+        }
+
+
+
+    }
+
 }
+
+
