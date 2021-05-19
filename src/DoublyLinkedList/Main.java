@@ -8,7 +8,6 @@ public class Main {
         list.inserAtBeg(30);
         list.inserAtBeg(40);
         list.inserAtBeg(50);
-
         list.inserAtEnd(55);
         list.inserAtBeg(69);
         list.printlist();
