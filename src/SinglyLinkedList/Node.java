@@ -5,7 +5,7 @@ public class Node {
     public Node next;
 
     public Node(int data) {
-        this.Data = data;
-        this.next = null;
+        Data = data;
+        next = null;
     }
 }

@@ -35,15 +35,19 @@ public class Doubly_L_L {
         }
     }
 
-    public void inserAtEnd(int data) {
+    public void insertAtEnd(int data) {
         Node nainode = new Node(data);
+        Node temp = new Node(data);
         if (head == null) {
             head = tail = nainode;
         } else {
             tail.next = nainode;
-            nainode = tail;
+            nainode.prev= tail;
+            tail.next= nainode;
             tail = nainode;
         }
+
     }
 }
+
 

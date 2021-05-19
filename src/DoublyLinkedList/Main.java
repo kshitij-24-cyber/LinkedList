@@ -3,13 +3,13 @@ package DoublyLinkedList;
 public class Main {
     public static void main(String[] args) {
         Doubly_L_L list = new Doubly_L_L();
-        list.inserAtBeg(10);
-        list.inserAtBeg(20);
-        list.inserAtBeg(30);
-        list.inserAtBeg(40);
-        list.inserAtBeg(50);
-        list.inserAtEnd(55);
-        list.inserAtBeg(69);
+        list.insertAtEnd(10);
+        list.insertAtEnd(20);
+        list.insertAtEnd(30);
+        list.insertAtEnd(40);
+        list.insertAtEnd(50);
+        list.insertAtEnd(60);
+        //list.insertAtBeg(05);
         list.printlist();
     }
 }
