@@ -48,6 +48,23 @@ public class Doubly_L_L {
         }
 
     }
+
+
+    public void DeletAtbeg(int data){
+        Node thisNode = new Node(data);
+        if (head==null){
+            thisNode=null;
+
+        }
+        if (head.next==null){
+            thisNode=null;
+        }
+        else{
+            head=head.next;
+            head.prev = null;
+            thisNode=head;
+        }
+    }
 }
 
 

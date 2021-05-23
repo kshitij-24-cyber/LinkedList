@@ -10,6 +10,9 @@ public class Main {
         list.insertAtEnd(50);
         list.insertAtEnd(60);
         //list.insertAtBeg(05);
+
+        list.DeletAtbeg(10);
         list.printlist();
     }
 }
+
