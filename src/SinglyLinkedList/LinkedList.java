@@ -106,14 +106,21 @@ public class LinkedList {
 
             }
             temp.next = curr.next;
-            curr.next=temp;
+            curr.next = temp;
 
         }
-
-
-
     }
 
+    public Node middleNode(int data) {
+        Node  middlenode = new Node(data);
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
 }
 
 
